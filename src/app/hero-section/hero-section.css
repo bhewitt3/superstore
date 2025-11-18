@@ -1,0 +1,26 @@
+#wrapper {
+    background-image: url(/hero.jpg);
+    background-size: cover;
+    height: 400px;
+    padding-top: 50px;
+}
+
+#hero-text-wrapper {
+    width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#call-to-action {
+    text-decoration: none;
+    background-color: rgb(192, 246, 248);
+    color: black;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 247, 255);
+    cursor: pointer;
+}
+
+#call-to-action:hover {
+    background-color: rgb(135, 251, 255);
+}
