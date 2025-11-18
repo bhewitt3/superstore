@@ -1,1 +1,19 @@
 <h1 id="title">All Products</h1>
+<div id="product-list">
+    @for (product of (data$ | async)?.products; track product.id) {
+        <div class="product-card" (click)="navigateToDetails(product.id)">
+            <img class="thumbnail" [src]="product.thumbnail" alt="" />
+            <p class="product-title">{{product.title}}</p>
+            @if (product.discountPercentage > 0){
+                <div class="discount-price-wrapper">
+                    <p class="price price-stroked">${{product.price}}</p>
+                    <p class="discount-price">
+                        ${{(product.price - ((product.price)*(product.discountPercentage/100))).toFixed(2)}}
+                    </p>   
+                </div>
+                
+            }
+            
+        </div>
+    }
+</div>
